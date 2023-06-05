@@ -1,0 +1,1 @@
+#define EA_TransmissionRadio
