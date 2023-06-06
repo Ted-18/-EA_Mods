@@ -26,7 +26,8 @@ class CfgMods
 				value="";
 				files[]=
 				{
-					"EA_Cooking\ExtraFarmingItems\Scripts\4_World"
+					"EA_Cooking\ExtraFarmingItems\Scripts\4_World",
+					"EA_Cooking\scripts\4_World"
 				};
 			};
 		};
@@ -40,138 +41,45 @@ class CfgPatches
 		units[]={};
 		weapons[]={};
 		requiredVersion=0.1;
-		requiredAddons[]=
-		{
-			"ExtraFarmingItems",
-			"DZ_Gear_Food"
+		requiredAddons[]={
+			"EA_Cooking_Items_Bases"
 		};
 	};
 };
 
 class CfgVehicles
 {
-	class SpaghettiCan_Opened;
+	class EA_Bowl_Base_Full;
 
-	class Bol : SpaghettiCan_Opened
+	class EA_Bowl_Rice : EA_Bowl_Base_Full
 	{
-		scope=2;
-		displayName="Bol de soupe de merde";
-		descriptionShort="Bol de soupe de merde";
-		model="EA_Cooking\bol\bol.p3d";
-		debug_ItemCategory=6;
-		itemSize[]={3,3};
-		weight=40;
-		varQuantityInit=400;
-		varQuantityMin=0;
-		varQuantityMax=400;
-		isMeleeWeapon=1;
+		displayName = "Bol de riz";
+		descriptionShort = "Un bol de riz nature, il faudrait essayer de le mélanger avec d'autres produits pour en faire un plat plus complet. Pour le moment c'est un peu sec...";
+
+		// Poids (en grammes)
+		weight=300;
+
+		// Quantité de riz (en grammes)
+		varQuantityInit=250;
+		varQuantityMax=250;
+
 		hiddenSelections[]=
 		{
-			"camoGround"
+			"modelBol"
 		};
 		hiddenSelectionsTextures[]=
 		{
-			// "EA_Cooking\bol\bol_co.paa"
-			"dz\gear\food\data\canned_spaghetti_co.paa"
+			"EA_Cooking\items\bowl\rice\bowl_rice_CO.paa"
 		};
-		class DamageSystem
-		{
-			class GlobalHealth
-			{
-				class Health
-				{
-					hitpoints=100;
-					healthLevels[]=
-					{
-						
-						{
-							1,
-							
-							{
-								"EA_Cooking\bol\bol.rvmat"
-							}
-						},
-						
-						{
-							0.69999999,
-							
-							{
-								"EA_Cooking\bol\bol.rvmat"
-							}
-						},
-						
-						{
-							0.5,
-							
-							{
-								"EA_Cooking\bol\bol.rvmat"
-							}
-						},
-						
-						{
-							0.30000001,
-							
-							{
-								"EA_Cooking\bol\bol.rvmat"
-							}
-						},
-						
-						{
-							0,
-							
-							{
-								"EA_Cooking\bol\bol.rvmat"
-							}
-						}
-					};
-				};
-			};
-		};
+
 		class Nutrition
 		{
-			fullnessIndex=2;
-			energy=175;
-			water=75;
-			nutritionalIndex=1;
-			toxicity=0;
-		};
-		soundImpactType="metal";
-		class AnimEvents
-		{
-			class SoundWeapon
-			{
-				class openTunaCan
-				{
-					soundSet="openTunaCan_SoundSet";
-					id=204;
-				};
-				class Eating_TakeFood
-				{
-					soundSet="Eating_TakeFood_Soundset";
-					id=889;
-				};
-				class Eating_BoxOpen
-				{
-					soundSet="Eating_BoxOpen_Soundset";
-					id=893;
-				};
-				class Eating_BoxShake
-				{
-					soundSet="Eating_BoxShake_Soundset";
-					id=894;
-				};
-				class Eating_BoxEnd
-				{
-					soundSet="Eating_BoxEnd_Soundset";
-					id=895;
-				};
-			};
+			energy=125;
+			water=50;
 		};
 	};
 };
-
-
-
+	
 // ==============================================
 // DayZ Meats
 // ==============================================

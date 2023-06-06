@@ -1,5 +1,10 @@
 class Recipe_Exemple extends RecipeBase
 {
+
+	private int lastNotificationTime = 0;
+    private int notificationDelay = 10000;
+
+
     // Initialise la recette
 	override void Init()
 	{   
@@ -181,17 +186,72 @@ class Recipe_Exemple extends RecipeBase
 		// valeur == -1 signifie ne rien faire
 		// une valeur >= 0 signifie que ce résultat transférera les propriétés de l'objet, 
 		//               les variables, les accessoires, etc., d'un ingrédient (valeur)
-	}
+	};
 	
-	// Vérifie si la recette peut être réalisée avec les ingrédients donnés
+	// Executed to check if recipe is valid
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)
 	{
-		return true; // Renvoie toujours vrai, ce qui signifie que la recette peut toujours être réalisée
-	}
+		float multiplicator0 = 0.5;
+		float multiplicator1 = 1.0;
+		string titleNotification = "Vous réfléchissez...";
+		string messageNotification0 = "Il me faudrait peut-être un peu plus de riz... ";
+		string messageNotification1 = "Il me faudrait peut-être un peu plus d'eau... ";
+		string imageNotification = "EA_Cooking/images/clue.paa";
 
-	// Exécute la recette
+		string multiplicatorString0 = (multiplicator0 * 100).ToString();
+		string multiplicatorString1 = (multiplicator1 * 100).ToString();
+
+		float minimumIngredientQuantity0 = ingredients[0].GetQuantityMax() * multiplicator0;
+		float minimumIngredientQuantity1 = ingredients[1].GetQuantityMax() * multiplicator1;
+
+		float currentIngredientQuantity0 = ingredients[0].GetQuantity();
+		float currentIngredientQuantity1 = ingredients[1].GetQuantity();
+
+		string ingredientMessage0 = currentIngredientQuantity0.ToString() + "g / " + minimumIngredientQuantity0.ToString() + "g";
+		string ingredientMessage1 = currentIngredientQuantity1.ToString() + "g / " + minimumIngredientQuantity1.ToString() + "g";
+
+		int currentTime = GetGame().GetTime();
+
+
+		if (currentIngredientQuantity0 < minimumIngredientQuantity0)
+		{
+			if (currentTime < lastNotificationTime + notificationDelay)
+			{
+				return false;
+			}
+
+			// Send notification
+			NotificationSystem.SendNotificationToPlayerIdentityExtended(player.GetIdentity(), 3, titleNotification, messageNotification0 + " " + ingredientMessage0, imageNotification);
+		
+			lastNotificationTime = currentTime;
+
+			// Cancel recipe
+			return false;
+
+		} else if (currentIngredientQuantity1 < minimumIngredientQuantity1)
+		{
+			if (currentTime < lastNotificationTime + notificationDelay)
+			{
+				return false;
+			}
+
+			// Send notification
+			NotificationSystem.SendNotificationToPlayerIdentityExtended(player.GetIdentity(), 3, titleNotification, messageNotification1 + " " + ingredientMessage1, imageNotification);
+		
+			lastNotificationTime = currentTime;
+
+			// Cancel recipe
+			return false;
+		};
+		
+
+		return true;
+	};
+
+	// Executed when recipe is performed
 	override void Do(ItemBase ingredients[], PlayerBase player, array<ItemBase> results, float specialty_weight)
 	{
-		Debug.Log("Recipe Do method called","recipes"); // Affiche un message dans les logs pour indiquer que la méthode Do de la recette a été appelée
-	}
+		Debug.Log("Recipe_EFI_Mutton_Curry Do method called","recipes");
+	};
+
 };

@@ -57,7 +57,7 @@ class Recipe_EFI_Savoury_Rice extends RecipeBase
         m_ResultToInventory[0] = -2;
         m_ResultUseSoftSkills[0] = false;
         m_ResultReplacesIngredient[0] = -1;
-    }
+    };
 
     // Executed to check if recipe is valid
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)
@@ -117,11 +117,11 @@ class Recipe_EFI_Savoury_Rice extends RecipeBase
 		
 
 		return true;
-	}
+	};
 
 	// Executed when recipe is performed
 	override void Do(ItemBase ingredients[], PlayerBase player, array<ItemBase> results, float specialty_weight)
 	{
 		Debug.Log("Recipe_EFI_Mutton_Curry Do method called","recipes");
-	}
+	};
 };
