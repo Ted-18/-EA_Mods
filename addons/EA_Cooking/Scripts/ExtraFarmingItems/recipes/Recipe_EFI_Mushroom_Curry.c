@@ -1,11 +1,11 @@
-class Recipe_EFI_Chicken_Curry extends RecipeBase
+class Recipe_EFI_Mushroom_Curry extends RecipeBase
 {	
 	private int lastNotificationTime = 0;
 	private int notificationDelay = 10000;
 
 	override void Init()
 	{   
-		m_Name = "[Cuisiner] Poulet au curry"; 
+		m_Name = "[Cuisiner] Curry de champignons"; // TODO
 		m_IsInstaRecipe = false;   
 		m_AnimationLength = 1;    
 		m_Specialty = 0.02;        
@@ -32,23 +32,23 @@ class Recipe_EFI_Chicken_Curry extends RecipeBase
 		
 		m_IngredientAddHealth[0] = 0;
 		m_IngredientSetHealth[0] = -1;
-		m_IngredientAddQuantity[0] = -250;
-		m_IngredientDestroy[0] = false;
+		m_IngredientAddQuantity[0] = -250; // TODO
+		m_IngredientDestroy[0] = false; // TODO
 		m_IngredientUseSoftSkills[0] = false;
 		
         //Ingrédients #2
-		InsertIngredient(1,"ChickenBreastMeat");
+		InsertIngredient(1,"BoletusMushroom");
 
 		m_IngredientAddHealth[1] = 0;
 		m_IngredientSetHealth[1] = -1;
-		m_IngredientAddQuantity[1] = 0;
-		m_IngredientDestroy[1] = true;
+		m_IngredientAddQuantity[1] = 0; // TODO
+		m_IngredientDestroy[1] = true; // TODO
 		m_IngredientUseSoftSkills[1] = false;
 
 		//----------------------------------------------------------------------------------------------------------------------
 		
         //Résultat
-		AddResult("EFI_Chicken_Curry");
+		AddResult("EFI_Mushroom_Curry"); // TODO
 		m_ResultSetFullQuantity[0] = true;
 		m_ResultSetQuantity[0] = 0;
 		m_ResultSetHealth[0] = -1;
@@ -58,18 +58,19 @@ class Recipe_EFI_Chicken_Curry extends RecipeBase
 		m_ResultUseSoftSkills[0] = false;
 		m_ResultReplacesIngredient[0] = -1;
 
-		Debug.Log("Recipe_EFI_Chicken_Curry Init done","recipes");
+		Debug.Log("EFI_Mushroom_Curry Recipe Init()","recipes");
 	}
 
 	// Executed to check if recipe is valid
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)
 	{
+		// TODO
 		float multiplicator0 = 0.5;
 		float multiplicator1 = 0.8;
 		string titleNotification = "Vous réfléchissez...";
 		string messageNotification0 = "Il me faudrait peut-être un peu plus de riz... ";
-		string messageNotification1 = "Je pourrais peut-être trouver un peu plus de poulet... ";
-		string imageNotification = "EA_Cooking/images/clue.paa";
+		string messageNotification1 = "Je pourrais peut-être trouver un peu plus de champignons... ";
+		string imageNotification = "EA_Cooking/images/notifications/clue.paa";
 
 		string multiplicatorString0 = (multiplicator0 * 100).ToString();
 		string multiplicatorString1 = (multiplicator1 * 100).ToString();
@@ -124,6 +125,8 @@ class Recipe_EFI_Chicken_Curry extends RecipeBase
 	// Executed when recipe is performed
 	override void Do(ItemBase ingredients[], PlayerBase player, array<ItemBase> results, float specialty_weight)
 	{
-		Debug.Log("Recipe_EFI_Chicken_Curry Do method called","recipes");
+		Debug.Log("EFI_Mushroom_Curry Recipe Do()","recipes");
 	}
+
+
 };

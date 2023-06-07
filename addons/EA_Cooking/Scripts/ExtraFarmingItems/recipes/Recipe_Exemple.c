@@ -196,7 +196,7 @@ class Recipe_Exemple extends RecipeBase
 		string titleNotification = "Vous réfléchissez...";
 		string messageNotification0 = "Il me faudrait peut-être un peu plus de riz... ";
 		string messageNotification1 = "Il me faudrait peut-être un peu plus d'eau... ";
-		string imageNotification = "EA_Cooking/images/clue.paa";
+		string imageNotification = "EA_Cooking/images/notifications/clue.paa";
 
 		string multiplicatorString0 = (multiplicator0 * 100).ToString();
 		string multiplicatorString1 = (multiplicator1 * 100).ToString();

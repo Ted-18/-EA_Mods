@@ -7,7 +7,7 @@ specularPower = 45;
 PixelShaderID = "Super";
 VertexShaderID = "Super";
 class Stage1 {
-	texture = "EA_Cooking\items\bowl\base\bowl_base_full_NOHQ.paa";
+	texture = "EA_Cooking\items\ExclusionArea\food\plate\base\food_plate_base_full_NOHQ.paa";
 	uvSource = "tex";
 	class uvTransform {
 		aside[] = { 1, 0, 0 };
@@ -37,7 +37,7 @@ class Stage3 {
 	};
 };
 class Stage4 {
-	texture = "EA_Cooking\items\bowl\base\bowl_base_full_AS.paa";
+	texture = "EA_Cooking\items\ExclusionArea\food\plate\base\food_plate_base_full_AS.paa";
 	uvSource = "tex";
 	class uvTransform {
 		aside[] = { 1, 0, 0 };

@@ -26,8 +26,7 @@ class CfgMods
 				value="";
 				files[]=
 				{
-					"EA_Cooking\ExtraFarmingItems\Scripts\4_World",
-					"EA_Cooking\scripts\4_World"
+					"EA_Cooking\Scripts"
 				};
 			};
 		};
@@ -42,18 +41,19 @@ class CfgPatches
 		weapons[]={};
 		requiredVersion=0.1;
 		requiredAddons[]={
-			"EA_Cooking_Items_Bases"
+			"EA_Food"
 		};
 	};
 };
 
 class CfgVehicles
 {
-	class EA_Bowl_Base_Full;
 
-	class EA_Bowl_Rice : EA_Bowl_Base_Full
+	class EA_Food_plate_Base_Full;
+
+	class EA_Food_Plate_Rice : EA_Food_plate_Base_Full
 	{
-		displayName = "Bol de riz";
+		displayName = "Assiette de riz";
 		descriptionShort = "Un bol de riz nature, il faudrait essayer de le mélanger avec d'autres produits pour en faire un plat plus complet. Pour le moment c'est un peu sec...";
 
 		// Poids (en grammes)
@@ -63,13 +63,9 @@ class CfgVehicles
 		varQuantityInit=250;
 		varQuantityMax=250;
 
-		hiddenSelections[]=
-		{
-			"modelBol"
-		};
 		hiddenSelectionsTextures[]=
 		{
-			"EA_Cooking\items\bowl\rice\bowl_rice_CO.paa"
+			"EA_Cooking\items\ExclusionArea\food\plate\rice\food_plate_rice_CO.paa"
 		};
 
 		class Nutrition

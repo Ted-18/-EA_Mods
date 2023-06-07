@@ -67,7 +67,7 @@ class Recipe_EFI_Mutton_Curry extends RecipeBase
 		string titleNotification = "Vous réfléchissez...";
 		string messageNotification0 = "Il me faudrait peut-être un peu plus de riz... ";
 		string messageNotification1 = "Je pourrais peut-être trouver un peu plus de viande... ";
-		string imageNotification = "EA_Cooking/images/clue.paa";
+		string imageNotification = "EA_Cooking/images/notifications/clue.paa";
 
 		string multiplicatorString0 = (multiplicator0 * 100).ToString();
 		string multiplicatorString1 = (multiplicator1 * 100).ToString();
