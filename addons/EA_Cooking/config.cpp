@@ -41,7 +41,8 @@ class CfgPatches
 		weapons[]={};
 		requiredVersion=0.1;
 		requiredAddons[]={
-			"EA_Food"
+			"EA_Food",
+			"EA_Cookware"
 		};
 	};
 };
@@ -49,12 +50,14 @@ class CfgPatches
 class CfgVehicles
 {
 
+
+	//EA_Food
 	class EA_Food_plate_Base_Full;
 
 	class EA_Food_Plate_Rice : EA_Food_plate_Base_Full
 	{
 		displayName = "Assiette de riz";
-		descriptionShort = "Un bol de riz nature, il faudrait essayer de le mélanger avec d'autres produits pour en faire un plat plus complet. Pour le moment c'est un peu sec...";
+		descriptionShort = "Une belle assiette de riz nature, il faudrait essayer de le mélanger avec d'autres produits pour en faire un plat plus complet. Pour le moment c'est un peu sec...";
 
 		// Poids (en grammes)
 		weight=300;
@@ -74,6 +77,22 @@ class CfgVehicles
 			water=50;
 		};
 	};
+
+
+	//EA_Cookware
+	class EA_Food_Plate_Base_Empty;
+
+	class EA_Food_Plate_Wood_Empty : EA_Food_Plate_Base_Empty
+	{
+		displayName = "Assiette en bois";
+		descriptionShort = "Une simple assiette en bois, on peut y mettre ce que l'on veut.";
+
+		hiddenSelectionsTextures[]=
+        {
+            "EA_Cooking\items\ExclusionArea\cookware\plate\wood\cookware_plate_wood_empty_CO.paa"
+        };
+	}
+
 };
 	
 // ==============================================

@@ -28,8 +28,8 @@ class CfgVehicles
 	class EA_Food_plate_Base_Full : Edible_Base
 	{
 		scope=2;
-		displayName="Base Plate";
-		descriptionShort="Base Plate";
+		displayName="Base Plate Full";
+		descriptionShort="Base Plate Full";
 		model="EA_Cooking\items\ExclusionArea\food\plate\base\food_plate_base_full.p3d";
 		debug_ItemCategory=6;
 		itemSize[]={3,3};
