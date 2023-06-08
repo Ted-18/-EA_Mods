@@ -190,118 +190,102 @@ class CfgVehicles
 // ==============================================
 // EA Food
 // ==============================================
-// EA_Food_Plate_Rice
+
+// -- TIER 1 --
+// 🟢EA_Food_Plate_Rice
+// 🔴EA_Food_Plate_Water
+// 🔴EA_Food_Plate_Stew_Sauce
+// 🔴EA_Food_Plate_Tomato_Sauce
+
+// -- TIER 2 --
+// 🔴EA_Food_Plate_Vegetables_Soup
+// 🔴EA_Food_Plate_Stew_Vegetables
+
+// 🔴EA_Food_Plate_Stew_Bear	
+// 🔴EA_Food_Plate_Stew_Boar			
+// 🔴EA_Food_Plate_Stew_Chicken			
+// 🔴EA_Food_Plate_Stew_Cow				
+// 🔴EA_Food_Plate_Stew_Deer					
+// 🔴EA_Food_Plate_Stew_Goat			
+// 🔴EA_Food_Plate_Stew_Pig				
+// 🔴EA_Food_Plate_Stew_Sheep			
+// 🔴EA_Food_Plate_Stew_Wolf
+
+// 🔴EA_Food_Plate_Bolognese_Sauce
+
+// -- TIER 3 --
+// 🔴EA_Food_Plate_Ted_Sauce
 
 
 
+
+
+
+
+
+// ITEMS
 // ==============================================
-// Food recipes
+// - Knife   						 	+ Firewood 	                            ==> EA_Food_Plate_Wood_Empty				"Assiette en bois"
+
+
+// BASIC FOOD
 // ==============================================
+// - Rice							+ EA_Food_Plate_Wood_Empty	            ==> EA_Food_Plate_Rice						"Assiette de riz"
+// - Waterbottle					+ EA_Food_Plate_Wood_Empty				==> EA_Food_Plate_Water						"Assiette remplie d'eau"
+// - EFI_Onion						+ EA_Food_Plate_Wood_Empty				==> EA_Food_Plate_Stew_Sauce				"Assiette de sauce à ragoût"
+// - EFI_Garlic						+ EA_Food_Plate_Wood_Empty				==> EA_Food_Plate_Stew_Sauce				"Assiette de sauce à ragoût"
 
 
-// Confit de canard avec riz
-// Coq au vin avec riz
-// Filet de poisson avec riz pilaf
+// VEGETABLES SOUP
+// ==============================================
+// - EFI_Beetroot					+ EA_Food_Plate_Water					==> EA_Food_Plate_Vegetables_Soup			"Assiette de soupe de légumes"
+// - EFI_Carrot						+ EA_Food_Plate_Water					==> EA_Food_Plate_Vegetables_Soup			"Assiette de soupe de légumes"
+// - EFI_Onion						+ EA_Food_Plate_Water					==> EA_Food_Plate_Vegetables_Soup			"Assiette de soupe de légumes"
+// - EFI_Garlic						+ EA_Food_Plate_Water					==> EA_Food_Plate_Vegetables_Soup			"Assiette de soupe de légumes"
+// - EFI_Kohlrabi					+ EA_Food_Plate_Water					==> EA_Food_Plate_Vegetables_Soup			"Assiette de soupe de légumes"
+// - EFI_Radish						+ EA_Food_Plate_Water					==> EA_Food_Plate_Vegetables_Soup			"Assiette de soupe de légumes"
+// - EFI_Parsnip					+ EA_Food_Plate_Water					==> EA_Food_Plate_Vegetables_Soup			"Assiette de soupe de légumes"
+// - EFI_Turnip						+ EA_Food_Plate_Water					==> EA_Food_Plate_Vegetables_Soup			"Assiette de soupe de légumes"
+// - Potato							+ EA_Food_Plate_Water					==> EA_Food_Plate_Vegetables_Soup			"Assiette de soupe de légumes"
+// - Zucchini						+ EA_Food_Plate_Water					==> EA_Food_Plate_Vegetables_Soup			"Assiette de soupe de légumes"
+// - Pumpkin						+ EA_Food_Plate_Water					==> EA_Food_Plate_Vegetables_Soup			"Assiette de soupe de légumes"
+// - Pepper							+ EA_Food_Plate_Water					==> EA_Food_Plate_Vegetables_Soup			"Assiette de soupe de légumes"
 
-// Ragoût de bœuf avec riz
 
-// Risotto aux champignons
-// Risotto aux légumes
-// Risotto aux fruits de mer
+// STEW (MEAT)
+// ==============================================
+// - BearSteakMeat					+ EA_Food_Plate_Stew_Sauce				==> EA_Food_Plate_Stew_Bear					"Assiette de ragoût d'ours"
+// - BoarSteakMeat					+ EA_Food_Plate_Stew_Sauce				==> EA_Food_Plate_Stew_Boar					"Assiette de ragoût de sanglier"
+// - ChickenBreastMeat				+ EA_Food_Plate_Stew_Sauce				==> EA_Food_Plate_Stew_Chicken				"Assiette de ragoût de poulet"
+// - CowSteakMeat					+ EA_Food_Plate_Stew_Sauce				==> EA_Food_Plate_Stew_Cow					"Assiette de ragoût de vache"
+// - DeerSteakMeat					+ EA_Food_Plate_Stew_Sauce				==> EA_Food_Plate_Stew_Deer					"Assiette de ragoût de cerf"
+// - GoatSteakMeat					+ EA_Food_Plate_Stew_Sauce				==> EA_Food_Plate_Stew_Goat					"Assiette de ragoût de chèvre"
+// - PigSteakMeat					+ EA_Food_Plate_Stew_Sauce				==> EA_Food_Plate_Stew_Pig					"Assiette de ragoût de porc"
+// - SheepSteakMeat					+ EA_Food_Plate_Stew_Sauce				==> EA_Food_Plate_Stew_Sheep				"Assiette de ragoût de mouton"
+// - WolfSteakMeat					+ EA_Food_Plate_Stew_Sauce				==> EA_Food_Plate_Stew_Wolf					"Assiette de ragoût de loup"
 
 
+// STEW (FISH)
+// ==============================================
+//
 
 
+// STEW (VEGETABLES)
+// ==============================================
+// - EFI_Beetroot					+ EA_Food_Plate_Stew_Sauce				==> EA_Food_Plate_Stew_Vegetables			"Assiette de ragoût de légumes"
+// - EFI_Carrot						+ EA_Food_Plate_Stew_Sauce				==> EA_Food_Plate_Stew_Vegetables			"Assiette de ragoût de légumes"
+// - EFI_Kohlrabi					+ EA_Food_Plate_Stew_Sauce				==> EA_Food_Plate_Stew_Vegetables			"Assiette de ragoût de légumes"
+// - EFI_Radish						+ EA_Food_Plate_Stew_Sauce				==> EA_Food_Plate_Stew_Vegetables			"Assiette de ragoût de légumes"
+// - EFI_Parsnip					+ EA_Food_Plate_Stew_Sauce				==> EA_Food_Plate_Stew_Vegetables			"Assiette de ragoût de légumes"
+// - EFI_Turnip						+ EA_Food_Plate_Stew_Sauce				==> EA_Food_Plate_Stew_Vegetables			"Assiette de ragoût de légumes"
+// - Potato							+ EA_Food_Plate_Stew_Sauce				==> EA_Food_Plate_Stew_Vegetables			"Assiette de ragoût de légumes"
+// - Zucchini						+ EA_Food_Plate_Stew_Sauce				==> EA_Food_Plate_Stew_Vegetables			"Assiette de ragoût de légumes"
+// - Pumpkin						+ EA_Food_Plate_Stew_Sauce				==> EA_Food_Plate_Stew_Vegetables			"Assiette de ragoût de légumes"
+// - Pepper							+ EA_Food_Plate_Stew_Sauce				==> EA_Food_Plate_Stew_Vegetables			"Assiette de ragoût de légumes"
 
 
-// EFI_Chicken_Curry - Recipe_EFI_Chicken_Curry
-// - ChickenBreastMeat + Rice
-
-// EFI_Mushroom_Curry - Recipe_EFI_Mushroom_Curry
-// - BoletusMushroom + Rice
-
-// EFI_Mutton_Curry - Recipe_EFI_Mutton_Curry
-// - GoatSteakMeat + Rice
-
-// EFI_Sausage_Curry - Recipe_EFI_Sausage_Curry
-// - PigSteakMeat + Rice
-// - SheepSteakMeat + Rice
-// - BoarSteakMeat + Rice
-
-// EFI_Savoury_Rice - Recipe_EFI_Savoury_Rice
-// - Rice + WaterBottle
-
-// EFI_Beef_Radish_Soup - Recipe_EFI_Beef_Radish_Soup
-// - CowSteakMeat + EFI_Radish 
-
-// EFI_Chicken_Soup - Recipe_EFI_Chicken_Soup
-// - ChickenBreastMeat + WaterBottle
-
-// EFI_Mushroom_Soup - Recipe_EFI_Mushroom_Soup
-// - BoletusMushroom + WaterBottle
-
-// EFI_Tomato_Soup - Recipe_EFI_Tomato_Soup
-// - Tomato + WaterBottle
-
-// EFI_Vegetable_Soup - Recipe_EFI_Vegetable_Soup
-// - EFI_Beetroot + waterBottle
-// - EFI_Carrot + waterBottle
-// - EFI_Onion + waterBottle
-// - EFI_Garlic + waterBottle
-// - EFI_Kohlrabi + waterBottle
-// - EFI_Radish + waterBottle
-// - EFI_Parsnip + waterBottle
-// - EFI_Turnip + waterBottle
-// - Potato + waterBottle
-// - Zucchini + waterBottle
-// - Pumpkin + waterBottle
-// - Pepper + waterBottle
-
-// EFI_Bear_Stew - Recipe_EFI_Bear_Stew
-// - BearSteakMeat + EFI_Onion
-// - BearSteakMeat + EFI_Garlic
-
-// EFI_Beef_Beet_Stew - Recipe_EFI_Beef_Beet_Stew
-// - CowSteakMeat + EFI_Beetroot
-
-// EFI_Beef_Mushroom_Stew - Recipe_EFI_Beef_Mushroom_Stew
-// - CowSteakMeat + BoletusMushroom
-
-// EFI_Beef_Onion_Stew - Recipe_EFI_Beef_Onion_Stew
-// - CowSteakMeat + EFI_Onion
-
-// EFI_Vegetable_Stew - Recipe_EFI_Vegetable_Stew
-// - EFI_Beetroot + EFI_Onion
-// - EFI_Carrot + EFI_Onion
-// - EFI_Onion + EFI_Garlic
-
-// EFI_Venison_Stew - Recipe_EFI_Venison_Stew
-// - DeerSteakMeat + EFI_Onion
-// - DeerSteakMeat + EFI_Garlic
-
-// BearSteakMeat - Recipe_BearSteakMeat
-// - BearSteakMeat(50%) + BearSteakMeat(50%)
-
-// BoarSteakMeat - Recipe_BoarSteakMeat
-// - BoarSteakMeat(50%) + BoarSteakMeat(50%)
-
-// ChickenBreastMeat - Recipe_ChickenBreastMeat
-// - ChickenBreastMeat(50%) + ChickenBreastMeat(50%)
-
-// CowSteakMeat - Recipe_CowSteakMeat
-// - CowSteakMeat(50%) + CowSteakMeat(50%)
-
-// DeerSteakMeat - Recipe_DeerSteakMeat
-// - DeerSteakMeat(50%) + DeerSteakMeat(50%)
-
-// GoatSteakMeat - Recipe_GoatSteakMeat
-// - GoatSteakMeat(50%) + GoatSteakMeat(50%)
-
-// PigSteakMeat - Recipe_PigSteakMeat
-// - PigSteakMeat(50%) + PigSteakMeat(50%)
-
-// SheepSteakMeat - Recipe_SheepSteakMeat
-// - SheepSteakMeat(50%) + SheepSteakMeat(50%)
-
-// WolfSteakMeat - Recipe_WolfSteakMeat
-// - WolfSteakMeat(50%) + WolfSteakMeat(50%)
+// TOMATO SAUCE
+// ==============================================
+// - Tomato							+ EA_Food_Plate_Wood_Empty					==> EA_Food_Plate_Tomato_Sauce				"Purée de tomates"
+// - BeefSteakMeat					+ EA_Food_Plate_Tomato_Sauce				==> EA_Food_Plate_Bolognese_Sauce			"Sauce bolognaise"
+// - EFI_Garlic 					+ EA_Food_Plate_Bolognese_Sauce				==> EA_Food_Plate_Ted_Sauce					"Sauce bolognaise de Ted"
