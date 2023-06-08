@@ -188,29 +188,32 @@ class CfgVehicles
 // EFI_Flour
 
 // ==============================================
-// Soups
+// EA Food
 // ==============================================
-// EFI_Chicken_Curry
-// EFI_Mushroom_Curry
-// EFI_Mutton_Curry
-// EFI_Sausage_Curry
-// EFI_Savoury_Rice
-// EFI_Beef_Radish_Soup
-// EFI_Chicken_Soup
-// EFI_Mushroom_Soup
-// EFI_Tomato_Soup
-// EFI_Vegetable_Soup
-// EFI_Bear_Stew
-// EFI_Beef_Beet_Stew
-// EFI_Beef_Mushroom_Stew
-// EFI_Beef_Onion_Stew
-// EFI_Vegetable_Stew
-// EFI_Venison_Stew
+// EA_Food_Plate_Rice
+
 
 
 // ==============================================
 // Food recipes
 // ==============================================
+
+
+// Confit de canard avec riz
+// Coq au vin avec riz
+// Filet de poisson avec riz pilaf
+
+// Ragoût de bœuf avec riz
+
+// Risotto aux champignons
+// Risotto aux légumes
+// Risotto aux fruits de mer
+
+
+
+
+
+
 // EFI_Chicken_Curry - Recipe_EFI_Chicken_Curry
 // - ChickenBreastMeat + Rice
 

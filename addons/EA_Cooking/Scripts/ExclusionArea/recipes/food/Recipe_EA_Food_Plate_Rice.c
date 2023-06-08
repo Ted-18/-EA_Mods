@@ -1,53 +1,57 @@
 class Recipe_EA_Food_Plate_Rice extends RecipeBase
 {	
     private int lastNotificationTime = 0;
-    private int notificationDelay = 10000;
 
     override void Init()
     {   
+		//----------------------------------------------------------------------------------------------------------------------
+		// RECIPE GENERAL SETTINGS
         m_Name = "[Cuisiner] Riz";
         m_IsInstaRecipe = false;   
         m_AnimationLength = 1;    
         m_Specialty = 0.02;        
         
+
+		//----------------------------------------------------------------------------------------------------------------------
+		// RECIPE INGREDIENTS CONDITIONS
         //Ingredient #1
         m_MinDamageIngredient[0] = -1;
         m_MaxDamageIngredient[0] = 3;
 
-        m_MinQuantityIngredient[0] = 1;
-        m_MaxQuantityIngredient[0] = -1;
+        m_MinQuantityIngredient[0] = 1; // DONT MODIFY
+        m_MaxQuantityIngredient[0] = -1; // DONT MODIFY
 
         //Ingredient #2
         m_MinDamageIngredient[1] = -1;
         m_MaxDamageIngredient[1] = 3;
 
-        m_MinQuantityIngredient[1] = 1;
-        m_MaxQuantityIngredient[1] = -1;
+        m_MinQuantityIngredient[1] = 1; // DONT MODIFY
+        m_MaxQuantityIngredient[1] = -1; // DONT MODIFY
+
 
         //----------------------------------------------------------------------------------------------------------------------
-        
+		// RECIPE INGREDIENTS MODIFICATIONS
 
         //Ingrédients #1
         InsertIngredient(0,"Rice");      
-        
         m_IngredientAddHealth[0] = 0;
         m_IngredientSetHealth[0] = -1;
-        m_IngredientAddQuantity[0] = -250; // TODO
-        m_IngredientDestroy[0] = false; // TODO
+        m_IngredientAddQuantity[0] = 0; // DONT MODIFY
+        m_IngredientDestroy[0] = false; // DONT MODIFY
         m_IngredientUseSoftSkills[0] = false;
         
         //Ingrédients #2
         InsertIngredient(1,"EA_Food_Plate_Wood_Empty"); // TODO
-
         m_IngredientAddHealth[1] = 0;
         m_IngredientSetHealth[1] = -1;
-        m_IngredientAddQuantity[1] = -1000; // TODO
-        m_IngredientDestroy[1] = false; // TODO
+        m_IngredientAddQuantity[1] = 0; // DONT MODIFY
+        m_IngredientDestroy[1] = false; // DONT MODIFY
         m_IngredientUseSoftSkills[1] = false;
 
-        //----------------------------------------------------------------------------------------------------------------------
         
-        //Résultat
+		//----------------------------------------------------------------------------------------------------------------------
+		// RECIPE RESULT SETTINGS
+
         AddResult("EA_Food_Plate_Rice");
         m_ResultSetFullQuantity[0] = true;
         m_ResultSetQuantity[0] = 0;
@@ -62,6 +66,8 @@ class Recipe_EA_Food_Plate_Rice extends RecipeBase
     // Executed to check if recipe is valid
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)
 	{
+		//----------------------------------------------------------------------------------------------------------------------
+		// ADVANCED RECIPE CONDITIONS
 
 		// Define if we use multiplicator or item amount
 		// true : multiplicator (%)
@@ -77,17 +83,19 @@ class Recipe_EA_Food_Plate_Rice extends RecipeBase
 		float multiplicator0 = 0.5;
 		float multiplicator1 = 0.0;
 
-		// Define Text
+
+		//----------------------------------------------------------------------------------------------------------------------
+		// ADVANCED RECIPE TEXTS
 		string titleNotification = "Vous réfléchissez...";
 		string messageNotification0 = "Je n'ai pas assez de riz...";
 		string messageNotification1 = "J'ai un problème avec mon assiette...";
-		string imageNotification = "EA_Cooking/images/notifications/clue.paa";
 
 		string ingredientUnit0 = "g"; // "g","ml", etc.
 		string ingredientUnit1 = ""; // "g","ml", etc.
 
 
-
+		//----------------------------------------------------------------------------------------------------------------------
+		// ADVANCED RECIPE VARIABLES DEFINITION
 		ItemBase ingredient0 = ingredients[0];
 		ItemBase ingredient1 = ingredients[1];
 		
@@ -100,7 +108,18 @@ class Recipe_EA_Food_Plate_Rice extends RecipeBase
 		string ingredientMessage0;
 		string ingredientMessage1;
 
-		// Use multiplicator or item amount
+
+		//----------------------------------------------------------------------------------------------------------------------
+		// ADVANCED RECIPE CALCULATIONS
+		
+		// Variables definitions:
+		// multiplicatorString0 : multiplicator in string format
+		// minimumIngredientQuantity0 : minimum quantity of ingredient needed
+		// currentIngredientQuantity0 : current quantity of ingredient
+		// ingredientMessage0 : quantity message (for notification)
+
+
+		// Ingredient 0
 		if (useMultiplicator0 == true)
 		{
 
@@ -116,6 +135,8 @@ class Recipe_EA_Food_Plate_Rice extends RecipeBase
 			// Define quantity message
 			ingredientMessage0 = currentIngredientQuantity0.ToString() + ingredientUnit0 + " / " + minimumIngredientQuantity0.ToString() + ingredientUnit0;
 
+			m_IngredientAddQuantity[0] = -minimumIngredientQuantity0;
+
 		} else
 		{
 			// If ingredient has quantity
@@ -129,10 +150,12 @@ class Recipe_EA_Food_Plate_Rice extends RecipeBase
 				currentIngredientQuantity0 = itemAmout0;
 			}
 
+			m_IngredientAddQuantity[0] = -minimumIngredientQuantity0;
 		}
 
 
-		if (useMultiplicator1 == true)
+		// Ingredient 1
+		if (useMultiplicator1)
 		{
 			string multiplicatorString1 = (multiplicator1 * 100).ToString();
 
@@ -141,6 +164,8 @@ class Recipe_EA_Food_Plate_Rice extends RecipeBase
 			currentIngredientQuantity1 = ingredient1.GetQuantity();
 
 			ingredientMessage1 = currentIngredientQuantity1.ToString() + ingredientUnit1 + " / " + minimumIngredientQuantity1.ToString() + ingredientUnit1;
+
+			m_IngredientAddQuantity[1] = -minimumIngredientQuantity1;
 		} else
 		{
 			if (ingredient1.HasQuantity() == true)
@@ -150,21 +175,26 @@ class Recipe_EA_Food_Plate_Rice extends RecipeBase
 			{
 				currentIngredientQuantity1 = itemAmout1;
 			}
+
+			m_IngredientAddQuantity[1] = -currentIngredientQuantity1;
 		}
 
 		
+		//----------------------------------------------------------------------------------------------------------------------
+		// ADVANCED RECIPE NOTIFICATIONS
 
+		// Get current time
 		int currentTime = GetGame().GetTime();
 
 		if (currentIngredientQuantity0 < minimumIngredientQuantity0)
 		{
-			if (currentTime < lastNotificationTime + notificationDelay)
+			if (currentTime < lastNotificationTime + constNotificationDelay)
 			{
 				return false;
 			}
 
 			// Send notification
-			NotificationSystem.SendNotificationToPlayerIdentityExtended(player.GetIdentity(), 3, titleNotification, messageNotification0 + " " + ingredientMessage0, imageNotification);
+			NotificationSystem.SendNotificationToPlayerIdentityExtended(player.GetIdentity(), 3, titleNotification, messageNotification0 + " " + ingredientMessage0, constImageNotificationClue);
 		
 			lastNotificationTime = currentTime;
 
@@ -173,13 +203,13 @@ class Recipe_EA_Food_Plate_Rice extends RecipeBase
 
 		} else if (currentIngredientQuantity1 < minimumIngredientQuantity1)
 		{
-			if (currentTime < lastNotificationTime + notificationDelay)
+			if (currentTime < lastNotificationTime + constNotificationDelay)
 			{
 				return false;
 			}
 
 			// Send notification
-			NotificationSystem.SendNotificationToPlayerIdentityExtended(player.GetIdentity(), 3, titleNotification, messageNotification1 + " " + ingredientMessage1, imageNotification);
+			NotificationSystem.SendNotificationToPlayerIdentityExtended(player.GetIdentity(), 3, titleNotification, messageNotification1 + " " + ingredientMessage1, constImageNotificationClue);
 		
 			lastNotificationTime = currentTime;
 
@@ -187,12 +217,15 @@ class Recipe_EA_Food_Plate_Rice extends RecipeBase
 			return false;
 		}
 
+
+		// ---------------------------------------------------------------------------------------------------------------------
+		// ADVANCED RECIPE FINAL RETURN
 		return true;
 	}
 
 	// Executed when recipe is performed
 	override void Do(ItemBase ingredients[], PlayerBase player, array<ItemBase> results, float specialty_weight)
 	{
-		Debug.Log("Recipe_EA_Savoury_Rice Do method called","recipes");
+		Debug.Log("Do method called","recipes");
 	};
 };
