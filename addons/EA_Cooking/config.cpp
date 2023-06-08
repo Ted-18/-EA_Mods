@@ -193,13 +193,20 @@ class CfgVehicles
 
 // -- TIER 1 --
 // 🟢EA_Food_Plate_Rice
+//    ◽️ food_plate_rice_CO
 // 🔴EA_Food_Plate_Water
+//    ◽️ food_plate_water_CO
 // 🔴EA_Food_Plate_Stew_Sauce
+//    ◽️ food_plate_stew_sauce_CO
 // 🔴EA_Food_Plate_Tomato_Sauce
+//    ◽️ food_plate_tomato_sauce_CO
+
 
 // -- TIER 2 --
 // 🔴EA_Food_Plate_Vegetables_Soup
-// 🔴EA_Food_Plate_Stew_Vegetables
+//    ◽️ food_plate_vegetables_soup_CO
+// 🔴EA_Food_Plate_Vegetables_Stew
+//    ◽️ food_plate_vegetables_stew_CO
 
 // 🔴EA_Food_Plate_Stew_Bear	
 // 🔴EA_Food_Plate_Stew_Boar			
@@ -210,11 +217,14 @@ class CfgVehicles
 // 🔴EA_Food_Plate_Stew_Pig				
 // 🔴EA_Food_Plate_Stew_Sheep			
 // 🔴EA_Food_Plate_Stew_Wolf
+//    ◽️ food_plate_meat_stew_CO
 
 // 🔴EA_Food_Plate_Bolognese_Sauce
+//    ◽️ food_plate_bolognese_sauce_CO
 
 // -- TIER 3 --
 // 🔴EA_Food_Plate_Ted_Sauce
+//    ◽️ food_plate_ted_sauce_CO
 
 
 
