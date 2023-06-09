@@ -64,7 +64,7 @@ class CfgVehicles
 	{
 		displayName = "Assiette de riz";
 
-		descriptionShort = "Une simple assiette de riz, je dois pouvoir y ajouter d'autres produits pour en faire un plat plus complet.";
+		descriptionShort = "Du riz dans une assiette, c'est sec... Je dois pouvoir y ajouter d'autres produits pour en faire un plat plus complet.";
 
 		hiddenSelectionsTextures[]=
 		{
@@ -73,7 +73,7 @@ class CfgVehicles
 
 		class Nutrition
 		{
-			energy=100;
+			energy=90;
 			water=10;
 		};
 	};
@@ -81,7 +81,7 @@ class CfgVehicles
 	class EA_Food_Plate_Water : EA_Food_plate_Base_Full
 	{
 		displayName = "Assiette remplie d'eau";
-		descriptionShort = "Une simple assiette remplie d'eau, je dois pouvoir y ajouter d'autres produits pour en faire un plat plus complet.";
+		descriptionShort = "Une assiette remplie d'eau, je peux y ajouter des produits pour en faire un plat plus complet.";
 
 		hiddenSelectionsTextures[]=
 		{
@@ -91,7 +91,41 @@ class CfgVehicles
 		class Nutrition
 		{
 			energy=10;
-			water=100;
+			water=90;
+		};
+	};
+
+	class EA_Food_Plate_Stew_Sauce : EA_Food_plate_Base_Full
+	{
+		displayName = "Assiette de sauce";
+		descriptionShort = "Un petit mélange d'arromates, je peux y ajouter des produits pour en faire un plat plus complet.";
+
+		hiddenSelectionsTextures[]=
+		{
+			"EA_Cooking\items\ExclusionArea\food\plate\stew\sauce\food_plate_stew_sauce_CO.paa"
+		};
+
+		class Nutrition
+		{
+			energy=30;
+			water=70;
+		};
+	};
+
+	class EA_Food_Plate_Tomato_Sauce : EA_Food_plate_Base_Full
+	{
+		displayName = "Assiette de sauce tomate";
+		descriptionShort = "Une sauce tomate, je peux y ajouter des produits pour en faire un plat plus complet.";
+
+		hiddenSelectionsTextures[]=
+		{
+			"EA_Cooking\items\ExclusionArea\food\plate\tomato\sauce\food_plate_tomato_sauce_CO.paa"
+		};
+
+		class Nutrition
+		{
+			energy=30;
+			water=70;
 		};
 	};
 
