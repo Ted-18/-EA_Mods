@@ -64,7 +64,7 @@ class CfgVehicles
 	{
 		displayName = "Assiette de riz";
 
-		descriptionShort = "Une simple assiette de riz, je dois pouvoir y ajouter d'autres produits pour en faire un plat plus complet. \n\nNourriture : 100 \nEau : 10";
+		descriptionShort = "Une simple assiette de riz, je dois pouvoir y ajouter d'autres produits pour en faire un plat plus complet.";
 
 		hiddenSelectionsTextures[]=
 		{
@@ -81,7 +81,7 @@ class CfgVehicles
 	class EA_Food_Plate_Water : EA_Food_plate_Base_Full
 	{
 		displayName = "Assiette remplie d'eau";
-		descriptionShort = "Une simple assiette remplie d'eau, je dois pouvoir y ajouter d'autres produits pour en faire un plat plus complet. \n\nNourriture : 10 \nEau : 100";
+		descriptionShort = "Une simple assiette remplie d'eau, je dois pouvoir y ajouter d'autres produits pour en faire un plat plus complet.";
 
 		hiddenSelectionsTextures[]=
 		{
