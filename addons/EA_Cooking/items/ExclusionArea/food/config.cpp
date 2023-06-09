@@ -33,10 +33,10 @@ class CfgVehicles
 		model="EA_Cooking\items\ExclusionArea\food\plate\base\food_plate_base_full.p3d";
 		debug_ItemCategory=6;
 		itemSize[]={3,3};
-		weight=40;
-		varQuantityInit=200;
+		weight=300;
+		varQuantityInit=250;
 		varQuantityMin=0;
-		varQuantityMax=200;
+		varQuantityMax=250;
 		isMeleeWeapon=1;
 
 		hiddenSelections[]=

@@ -50,21 +50,21 @@ class CfgPatches
 class CfgVehicles
 {
 
-
-	//EA_Food
 	class EA_Food_plate_Base_Full;
+
+	// ------------------------------------------------------------------------------------------------------------------
+	// TIER 1 : 1 INGREDIENT
+	// -- TIER 1 --
+	// EA_Food_Plate_Rice
+	// EA_Food_Plate_Water
+	// EA_Food_Plate_Stew_Sauce
+	// EA_Food_Plate_Tomato_Sauce
 
 	class EA_Food_Plate_Rice : EA_Food_plate_Base_Full
 	{
 		displayName = "Assiette de riz";
-		descriptionShort = "Une belle assiette de riz nature, il faudrait essayer de le mélanger avec d'autres produits pour en faire un plat plus complet. Pour le moment c'est un peu sec...";
 
-		// Poids (en grammes)
-		weight=300;
-
-		// Quantité de riz (en grammes)
-		varQuantityInit=250;
-		varQuantityMax=250;
+		descriptionShort = "Une simple assiette de riz, je dois pouvoir y ajouter d'autres produits pour en faire un plat plus complet. \n\nNourriture : 100 \nEau : 10";
 
 		hiddenSelectionsTextures[]=
 		{
@@ -73,10 +73,53 @@ class CfgVehicles
 
 		class Nutrition
 		{
-			energy=125;
-			water=50;
+			energy=100;
+			water=10;
 		};
 	};
+
+	class EA_Food_Plate_Water : EA_Food_plate_Base_Full
+	{
+		displayName = "Assiette remplie d'eau";
+		descriptionShort = "Une simple assiette remplie d'eau, je dois pouvoir y ajouter d'autres produits pour en faire un plat plus complet. \n\nNourriture : 10 \nEau : 100";
+
+		hiddenSelectionsTextures[]=
+		{
+			"EA_Cooking\items\ExclusionArea\food\plate\water\food_plate_water_CO.paa"
+		};
+
+		class Nutrition
+		{
+			energy=10;
+			water=100;
+		};
+	};
+
+
+	
+
+	// ------------------------------------------------------------------------------------------------------------------
+	// TIER 2 : 2 INGREDIENTS
+	// EA_Food_Plate_Vegetables_Soup
+	// EA_Food_Plate_Vegetables_Stew
+
+	// EA_Food_Plate_Stew_Bear	
+	// EA_Food_Plate_Stew_Boar			
+	// EA_Food_Plate_Stew_Chicken			
+	// EA_Food_Plate_Stew_Cow				
+	// EA_Food_Plate_Stew_Deer					
+	// EA_Food_Plate_Stew_Goat			
+	// EA_Food_Plate_Stew_Pig				
+	// EA_Food_Plate_Stew_Sheep			
+	// EA_Food_Plate_Stew_Wolf
+
+	// EA_Food_Plate_Bolognese_Sauce
+
+
+	// ------------------------------------------------------------------------------------------------------------------
+	// TIER 3 : 3 INGREDIENTS
+	// EA_Food_Plate_Ted_Sauce
+
 
 
 	//EA_Cookware
