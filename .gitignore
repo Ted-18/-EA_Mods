@@ -1,5 +1,13 @@
 
 *.bak
 *.pbo
-*.bak
-*.pbo
+
+.idea/*
+.idea/@EA_Mods.iml
+.idea/discord.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+addons/EA_Cooking/config.cpp
+cmake-build-debug/CMakeFiles/clion-Debug-log.txt
+debug.log
