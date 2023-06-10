@@ -1,3 +1,5 @@
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "UnusedLocalVariable"
 class CfgMods
 {
     class EA_Cooking
@@ -46,6 +48,7 @@ class CfgPatches
 		};
 	};
 };
+
 
 class CfgVehicles
 {
@@ -149,10 +152,225 @@ class CfgVehicles
 
 	// EA_Food_Plate_Bolognese_Sauce
 
+    class EA_Food_Plate_Vegetables_Soup : EA_Food_plate_Base_Full
+    {
+        displayName = "Soupe de légumes";
+        descriptionShort = "C'est agréable, ça manque de consistence mais ça désaltère.";
+
+        hiddenSelectionsTextures[]=
+        {
+            "EA_Cooking\items\ExclusionArea\food\plate\vegetables\soup\food_plate_vegetables_soup_CO.paa"
+        };
+
+        class Nutrition
+        {
+            energy=50;
+            water=50;
+        };
+    };
+    class EA_Food_Plate_Vegetables_Stew : EA_Food_plate_Base_Full
+    {
+        displayName = "Ragoût de légumes";
+        descriptionShort = "Un bon mélange de légumes, c'est consistant et ça désaltère.";
+
+        hiddenSelectionsTextures[]=
+        {
+            "EA_Cooking\items\ExclusionArea\food\plate\vegetables\stew\food_plate_vegetables_stew_CO.paa"
+        };
+
+        class Nutrition
+        {
+            energy=30;
+			water=70;
+        };
+    };
+
+
+    class EA_Food_Plate_Stew_Bear : EA_Food_plate_Base_Full
+    {
+        displayName = "Ragoût d'ours";
+        descriptionShort = "C'est la petite bête qui mange la grosse!";
+
+        hiddenSelectionsTextures[]=
+        {
+            "EA_Cooking\items\ExclusionArea\food\plate\meat_stew\food_plate_meat_stew_CO.paa"
+        };
+
+        class Nutrition
+        {
+            energy=30;
+			water=70;
+        };
+    };
+    class EA_Food_Plate_Stew_Boar : EA_Food_plate_Base_Full
+    {
+        displayName = "Ragoût de sanglier";
+        descriptionShort = "Un bon cochon sauvage, ça se mange avec plaisir.";
+
+        hiddenSelectionsTextures[]=
+        {
+            "EA_Cooking\items\ExclusionArea\food\plate\meat_stew\food_plate_meat_stew_CO.paa"
+        };
+
+        class Nutrition
+        {
+            energy=30;
+			water=70;
+        };
+    };
+    class EA_Food_Plate_Stew_Chicken : EA_Food_plate_Base_Full
+    {
+        displayName = "Ragoût de poulet";
+        descriptionShort = "J'en pouvais plus de l'entendre ce bestiau..";
+
+        hiddenSelectionsTextures[]=
+        {
+            "EA_Cooking\items\ExclusionArea\food\plate\meat_stew\food_plate_meat_stew_CO.paa"
+        };
+
+        class Nutrition
+        {
+            energy=30;
+			water=70;
+        };
+    };
+    class EA_Food_Plate_Stew_Cow : EA_Food_plate_Base_Full
+    {
+        displayName = "Ragoût de vache";
+        descriptionShort = "J'adore la viande de vache, c'est si tendre.";
+
+        hiddenSelectionsTextures[]=
+        {
+            "EA_Cooking\items\ExclusionArea\food\plate\meat_stew\food_plate_meat_stew_CO.paa"
+        };
+
+        class Nutrition
+        {
+            energy=30;
+			water=70;
+        };
+    };
+    class EA_Food_Plate_Stew_Deer : EA_Food_plate_Base_Full
+    {
+        displayName = "Ragoût de cerf";
+        descriptionShort = "Il fait moins le malin Bamby maintenant.";
+
+        hiddenSelectionsTextures[]=
+        {
+            "EA_Cooking\items\ExclusionArea\food\plate\meat_stew\food_plate_meat_stew_CO.paa"
+        };
+
+        class Nutrition
+        {
+            energy=30;
+			water=70;
+        };
+    };
+    class EA_Food_Plate_Stew_Goat : EA_Food_plate_Base_Full
+    {
+        displayName = "Ragoût de chèvre";
+        descriptionShort = "Difficile à attraper, mais une fois dans l'assiette, c'est un régal.";
+
+        hiddenSelectionsTextures[]=
+        {
+            "EA_Cooking\items\ExclusionArea\food\plate\meat_stew\food_plate_meat_stew_CO.paa"
+        };
+
+        class Nutrition
+        {
+            energy=30;
+			water=70;
+        };
+    };
+    class EA_Food_Plate_Stew_Pig : EA_Food_plate_Base_Full
+    {
+        displayName = "Ragoût de cochon";
+        descriptionShort = "Bah alors Peppa? Tu fais moins la maligne maintenant?";
+
+        hiddenSelectionsTextures[]=
+        {
+            "EA_Cooking\items\ExclusionArea\food\plate\meat_stew\food_plate_meat_stew_CO.paa"
+        };
+
+        class Nutrition
+        {
+            energy=30;
+			water=70;
+        };
+    };
+    class EA_Food_Plate_Stew_Sheep : EA_Food_plate_Base_Full
+    {
+        displayName = "Ragoût de mouton";
+        descriptionShort = "C'est quand même con un mouton, ça se laisse faire sans rien dire.";
+
+        hiddenSelectionsTextures[]=
+        {
+            "EA_Cooking\items\ExclusionArea\food\plate\meat_stew\food_plate_meat_stew_CO.paa"
+        };
+
+        class Nutrition
+        {
+            energy=30;
+			water=70;
+        };
+    };
+    class EA_Food_Plate_Stew_Wolf : EA_Food_plate_Base_Full
+    {
+        displayName = "Ragoût de loup";
+        descriptionShort = "Qui a eu l'idée de manger du loup? C'est dur comme du bois!";
+
+        hiddenSelectionsTextures[]=
+        {
+            "EA_Cooking\items\ExclusionArea\food\plate\meat_stew\food_plate_meat_stew_CO.paa"
+        };
+
+        class Nutrition
+        {
+            energy=30;
+			water=70;
+        };
+    };
+
+
+    class EA_Food_Plate_Bolognese_Sauce : EA_Food_plate_Base_Full
+    {
+        displayName = "Sauce bolognaise";
+        descriptionShort = "Une bonne sauce bolognaise, ça fait toujours plaisir. Ca manque d'ail. Où est l'ail?";
+
+        hiddenSelectionsTextures[]=
+        {
+            "EA_Cooking\items\ExclusionArea\food\plate\bbolognese_sauce\food_plate_bolognese_sauce_CO.paa"
+        };
+
+        class Nutrition
+        {
+            energy=30;
+			water=70;
+        };
+    };
+
+
 
 	// ------------------------------------------------------------------------------------------------------------------
 	// TIER 3 : 3 INGREDIENTS
 	// EA_Food_Plate_Ted_Sauce
+
+    class EA_Food_Plate_Ted_Sauce : EA_Food_plate_Base_Full
+    {
+        displayName = "Sauce Ted";
+        descriptionShort = "Une sauce Ted, c'est une sauce avec des tomates, des oignons et de la viande. C'est tout.";
+
+        hiddenSelectionsTextures[]=
+        {
+            "EA_Cooking\items\ExclusionArea\food\plate\ted\food_plate_ted_CO.paa"
+        };
+
+        class Nutrition
+        {
+            energy=30;
+            water=70;
+        };
+    };
 
 
 
@@ -376,3 +594,4 @@ class CfgVehicles
 // - Tomato							+ EA_Food_Plate_Wood_Empty					==> EA_Food_Plate_Tomato_Sauce				"Purée de tomates"
 // - BeefSteakMeat					+ EA_Food_Plate_Tomato_Sauce				==> EA_Food_Plate_Bolognese_Sauce			"Sauce bolognaise"
 // - EFI_Garlic 					+ EA_Food_Plate_Bolognese_Sauce				==> EA_Food_Plate_Ted_Sauce					"Sauce bolognaise de Ted"
+#pragma clang diagnostic pop
