@@ -98,12 +98,12 @@ class CfgVehicles
 
 	class EA_Food_Plate_Stew_Sauce : EA_Food_plate_Base_Full
 	{
-		displayName = "Assiette de sauce";
+		displayName = "Sauce à ragoût";
 		descriptionShort = "Un petit mélange d'arromates, je peux y ajouter des produits pour en faire un plat plus complet.";
 
 		hiddenSelectionsTextures[]=
 		{
-			"EA_Cooking\items\ExclusionArea\food\plate\stew\sauce\food_plate_stew_sauce_CO.paa"
+			"EA_Cooking\items\ExclusionArea\food\plate\stew_sauce\food_plate_stew_sauce_CO.paa"
 		};
 
 		class Nutrition
@@ -120,7 +120,7 @@ class CfgVehicles
 
 		hiddenSelectionsTextures[]=
 		{
-			"EA_Cooking\items\ExclusionArea\food\plate\tomato\sauce\food_plate_tomato_sauce_CO.paa"
+			"EA_Cooking\items\ExclusionArea\food\plate\tomato_sauce\food_plate_tomato_sauce_CO.paa"
 		};
 
 		class Nutrition
@@ -157,7 +157,7 @@ class CfgVehicles
 
         hiddenSelectionsTextures[]=
         {
-            "EA_Cooking\items\ExclusionArea\food\plate\vegetables\soup\food_plate_vegetables_soup_CO.paa"
+            "EA_Cooking\items\ExclusionArea\food\plate\vegetables_soup\food_plate_vegetables_soup_CO.paa"
         };
 
         class Nutrition
@@ -173,7 +173,7 @@ class CfgVehicles
 
         hiddenSelectionsTextures[]=
         {
-            "EA_Cooking\items\ExclusionArea\food\plate\vegetables\stew\food_plate_vegetables_stew_CO.paa"
+            "EA_Cooking\items\ExclusionArea\food\plate\vegetables_stew\food_plate_vegetables_stew_CO.paa"
         };
 
         class Nutrition
@@ -187,7 +187,7 @@ class CfgVehicles
     class EA_Food_Plate_Stew_Bear : EA_Food_plate_Base_Full
     {
         displayName = "Ragoût d'ours";
-        descriptionShort = "C'est la petite bête qui mange la grosse!";
+        descriptionShort = "C'est la petite bête qui mange la grosse! Ah ah, loser!";
 
         hiddenSelectionsTextures[]=
         {
@@ -337,7 +337,7 @@ class CfgVehicles
 
         hiddenSelectionsTextures[]=
         {
-            "EA_Cooking\items\ExclusionArea\food\plate\bbolognese_sauce\food_plate_bolognese_sauce_CO.paa"
+            "EA_Cooking\items\ExclusionArea\food\plate\bolognese_sauce\food_plate_bolognese_sauce_CO.paa"
         };
 
         class Nutrition
@@ -360,7 +360,7 @@ class CfgVehicles
 
         hiddenSelectionsTextures[]=
         {
-            "EA_Cooking\items\ExclusionArea\food\plate\ted\food_plate_ted_CO.paa"
+            "EA_Cooking\items\ExclusionArea\food\plate\ted_sauce\food_plate_ted_sauce_CO.paa"
         };
 
         class Nutrition
