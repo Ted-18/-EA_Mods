@@ -1,4 +1,4 @@
-class Recipe_EA_Food_Plate_Rice extends Recipe_EA_Base
+class Recipe_EA_Food_Plate_Rice extends Recipe_EA_Base // 🔴
 {	
 
     override void advancedRecipeSettings()
@@ -66,7 +66,7 @@ class Recipe_EA_Food_Plate_Rice extends Recipe_EA_Base
         m_IngredientAddHealth[0] = 0; // 🟢
         m_IngredientSetHealth[0] = -1; // 🟡
         m_IngredientAddQuantity[0] = 0; // ❌
-        m_IngredientDestroy[0] = false; // ❌
+        m_IngredientDestroy[0] = false; // 🟡
         m_IngredientUseSoftSkills[0] = false; // 🟢
         
         //Ingrédients #2
@@ -74,7 +74,7 @@ class Recipe_EA_Food_Plate_Rice extends Recipe_EA_Base
         m_IngredientAddHealth[1] = 0; // 🟢
         m_IngredientSetHealth[1] = -1; // 🟡
         m_IngredientAddQuantity[1] = 0; // ❌
-        m_IngredientDestroy[1] = false; // ❌
+        m_IngredientDestroy[1] = false; // 🟡
         m_IngredientUseSoftSkills[1] = false; // 🟢
 
         

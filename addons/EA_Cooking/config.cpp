@@ -74,8 +74,8 @@ class CfgVehicles
 
 		class Nutrition
 		{
-			energy=90;
-			water=10;
+			energy=100;
+			water=0;
 		};
 	};
 
@@ -91,8 +91,8 @@ class CfgVehicles
 
 		class Nutrition
 		{
-			energy=10;
-			water=90;
+			energy=0;
+			water=100;
 		};
 	};
 
@@ -108,8 +108,8 @@ class CfgVehicles
 
 		class Nutrition
 		{
-			energy=30;
-			water=70;
+			energy=40;
+			water=60;
 		};
 	};
 
@@ -125,8 +125,8 @@ class CfgVehicles
 
 		class Nutrition
 		{
-			energy=30;
-			water=70;
+			energy=15;
+			water=85;
 		};
 	};
 
@@ -162,8 +162,8 @@ class CfgVehicles
 
         class Nutrition
         {
-            energy=50;
-            water=50;
+            energy=30;
+            water=70;
         };
     };
     class EA_Food_Plate_Vegetables_Stew : EA_Food_plate_Base_Full
@@ -178,8 +178,8 @@ class CfgVehicles
 
         class Nutrition
         {
-            energy=30;
-			water=70;
+            energy=70;
+			water=130;
         };
     };
 
@@ -196,8 +196,8 @@ class CfgVehicles
 
         class Nutrition
         {
-            energy=30;
-			water=70;
+            energy=100;
+			water=100;
         };
     };
     class EA_Food_Plate_Stew_Boar : EA_Food_plate_Base_Full
@@ -212,8 +212,8 @@ class CfgVehicles
 
         class Nutrition
         {
-            energy=30;
-			water=70;
+            energy=100;
+			water=100;
         };
     };
     class EA_Food_Plate_Stew_Chicken : EA_Food_plate_Base_Full
@@ -228,8 +228,8 @@ class CfgVehicles
 
         class Nutrition
         {
-            energy=30;
-			water=70;
+            energy=100;
+			water=100;
         };
     };
     class EA_Food_Plate_Stew_Cow : EA_Food_plate_Base_Full
@@ -244,8 +244,8 @@ class CfgVehicles
 
         class Nutrition
         {
-            energy=30;
-			water=70;
+            energy=100;
+			water=100;
         };
     };
     class EA_Food_Plate_Stew_Deer : EA_Food_plate_Base_Full
@@ -260,8 +260,8 @@ class CfgVehicles
 
         class Nutrition
         {
-            energy=30;
-			water=70;
+            energy=100;
+			water=100;
         };
     };
     class EA_Food_Plate_Stew_Goat : EA_Food_plate_Base_Full
@@ -276,8 +276,8 @@ class CfgVehicles
 
         class Nutrition
         {
-            energy=30;
-			water=70;
+            energy=100;
+			water=100;
         };
     };
     class EA_Food_Plate_Stew_Pig : EA_Food_plate_Base_Full
@@ -292,8 +292,8 @@ class CfgVehicles
 
         class Nutrition
         {
-            energy=30;
-			water=70;
+            energy=100;
+			water=100;
         };
     };
     class EA_Food_Plate_Stew_Sheep : EA_Food_plate_Base_Full
@@ -308,8 +308,8 @@ class CfgVehicles
 
         class Nutrition
         {
-            energy=30;
-			water=70;
+            energy=100;
+			water=100;
         };
     };
     class EA_Food_Plate_Stew_Wolf : EA_Food_plate_Base_Full
@@ -324,8 +324,8 @@ class CfgVehicles
 
         class Nutrition
         {
-            energy=30;
-			water=70;
+            energy=100;
+			water=100;
         };
     };
 
@@ -342,8 +342,8 @@ class CfgVehicles
 
         class Nutrition
         {
-            energy=30;
-			water=70;
+            energy=85;
+			water=115;
         };
     };
 
@@ -355,8 +355,8 @@ class CfgVehicles
 
     class EA_Food_Plate_Ted_Sauce : EA_Food_plate_Base_Full
     {
-        displayName = "Sauce Ted";
-        descriptionShort = "Une sauce Ted, c'est une sauce avec des tomates, des oignons et de la viande. C'est tout.";
+        displayName = "Sauce bolognaise à l'ancienne";
+        descriptionShort = "dqzdd";
 
         hiddenSelectionsTextures[]=
         {
@@ -365,10 +365,11 @@ class CfgVehicles
 
         class Nutrition
         {
-            energy=30;
-            water=70;
+            energy=125;
+            water=165;
         };
     };
+
 
 
 
@@ -392,93 +393,260 @@ class CfgVehicles
 // DayZ Meats
 // ==============================================
 // BearSteakMeat
+// - Water : 30
+// - Energy : 70
+
 // BoarSteakMeat
+// - Water : 30
+// - Energy : 70
+
 // ChickenBreastMeat
+// - Water : 30
+// - Energy : 70
+
 // CowSteakMeat
+// - Water : 30
+// - Energy : 70
+
 // DeerSteakMeat
+// - Water : 30
+// - Energy : 70
+
 // GoatSteakMeat
+// - Water : 30
+// - Energy : 70
+
 // PigSteakMeat
+// - Water : 30
+// - Energy : 70
+
 // SheepSteakMeat
+// - Water : 30
+// - Energy : 70
+
 // WolfSteakMeat
+// - Water : 30
+// - Energy : 70
+
+// Lard
+// - Water : 25
+// - Energy : 75
+
 
 // ==============================================
 // DayZ Vegetables
 // ==============================================
 // BoletusMushroom
+// - Water : 80
+// - Energy : 20
+
 // Tomato
+// - Water : 85
+// - Energy : 15
+
 // Zucchini
+// - Water : 70
+// - Energy : 30
+
 // Pumpkin
-// Potato
-// Pepper
+// - Water : 70
+// - Energy : 30
+
+// Potato (Patate)
+// - Water : 25
+// - Energy : 75
+
+// Pepper (Poivron)
+// - Water : 70
+// - Energy : 30
+
 
 // ==============================================
 // DayZ Fruits
 // ==============================================
 // Apple
+// - Water : 75
+// - Energy : 25
+
 // Pear
+// - Water : 75
+// - Energy : 25
+
 // Plum
+// - Water : 75
+// - Energy : 25
+
 // Peach
+// - Water : 75
+// - Energy : 25
+
 // Orange
+// - Water : 85
+// - Energy : 15
+
 // Banana
+// - Water : 40
+// - Energy : 60
+
 // Kiwi
+// - Water : 70
+// - Energy : 30
+
 
 // ==============================================
 // DayZ Cereals
 // ==============================================
-// Rice
+// Rice (Riz) ✅
+// - Water : 0
+// - Energy : 100
+
 
 // ==============================================
 // DayZ Drinks
 // ==============================================
-// WaterBottle
-// SodaCan_Cola
-// SodaCan_Kvass
-// SodaCan_Pipsi
-// SodaCan_Spite
-// SodaCan_Fronta
+// WaterBottle (Bouteille d'eau) ✅
+// - Water : 100
+// - Energy : 0
+
+// SodaCan_Cola (Canette de Cola) ✅
+// - Water : 150
+// - Energy : 50
+
+// SodaCan_Kvass (Canette de Kvass) ✅
+// - Water : 150
+// - Energy : 50
+
+// SodaCan_Pipsi (Canette de Pipsi) ✅
+// - Water : 150
+// - Energy : 50
+
+// SodaCan_Spite (Canette de Spite) ✅
+// - Water : 150
+// - Energy : 50
+
+// SodaCan_Fronta (Canette de Fronta) ✅
+// - Water : 150
+// - Energy : 50
+
 
 // ==============================================
 // DayZ Other
 // ==============================================
 // Egg
-// Honey
-// Lard
-// PowderedMilk
-// SaltSticks
+// - Water : 50
+// - Energy : 50
+
+// Honey (Miel) ✅
+// - Water : 0
+// - Energy : 250
+
+// PowderedMilk (Lait en poudre) ✅
+// - Water : 0
+// - Energy : 400
+
+// SaltSticks (Baton de sel) ✅
+// - Water : 0
+// - Energy : 100
+
 
 // ==============================================
 // DayZ Can Food
 // ==============================================
-// BakeBeansCan
-// PeachesCan
-// TacticalBaconCan
-// SpaghettiCan
-// SardinesCan
-// TunaCan
-// PorkCan
+// BakeBeansCan (Haricots blancs) ✅
+// - Water : 50
+// - Energy : 200
+
+// PeachesCan (Pêches) ✅
+// - Water : 100
+// - Energy : 150
+
+// TacticalBaconCan (Lard) ✅
+// - Water : 50
+// - Energy : 300
+
+// SpaghettiCan (Spaghettis) ✅
+// - Water : 75
+// - Energy : 175
+
+// SardinesCan (Sardines) ✅
+// - Water : 200
+// - Energy : 250
+
+// TunaCan (Thon) ✅
+// - Water : 150
+// - Energy : 100
+
+// PorkCan (Porc) ✅
+// - Water : 25
+// - Energy : 225
+
+// Lunchmeat (Viande en boite) ✅
+// - Water : 50
+// - Energy : 200
+
 
 // ==============================================
 // Vegetables 
 // ==============================================
-// EFI_Beetroot
-// EFI_Carrot
-// EFI_Onion
-// EFI_Garlic
-// EFI_Kohlrabi
-// EFI_Radish
-// EFI_Parsnip
-// EFI_RedMango
-// EFI_Pineapple
-// EFI_SugarMelon
-// EFI_Strawberry
-// EFI_Turnip
+// EFI_Beetroot (Betterave)
+// - Water : 60
+// - Energy : 40
+
+// EFI_Carrot (Carotte)
+// - Water : 60
+// - Energy : 40
+
+// EFI_Onion (Oignon)
+// - Water : 60
+// - Energy : 40
+
+// EFI_Garlic (Ail)
+// - Water : 60
+// - Energy : 40
+
+// EFI_Kohlrabi (Chou-rave)
+// - Water : 60
+// - Energy : 40
+
+// EFI_Radish (Radis)
+// - Water : 60
+// - Energy : 40
+
+// EFI_Parsnip (Panais)
+// - Water : 60
+// - Energy : 40
+
+// EFI_RedMango (Mangue)
+// - Water : 75
+// - Energy : 25
+
+// EFI_Pineapple (Ananas)
+// - Water : 75
+// - Energy : 25
+
+// EFI_SugarMelon (Melon)
+// - Water : 75
+// - Energy : 25
+
+// EFI_Strawberry (Fraise)
+// - Water : 75
+// - Energy : 25
+
+// EFI_Turnip (Navet)
+// - Water : 75
+// - Energy : 25
+
 
 // ==============================================
 // Other
 // ==============================================
 // EFI_Bread_Roll
+// - Water : 15
+// - Energy : 85
+
 // EFI_Wheat
 // EFI_Flour
+
 
 // ==============================================
 // EA Food
