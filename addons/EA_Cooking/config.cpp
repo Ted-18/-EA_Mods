@@ -59,7 +59,6 @@ class CfgVehicles
 	// EA_Food_Plate_Rice
 	// EA_Food_Plate_Water
 	// EA_Food_Plate_Stew_Sauce
-	// z
 
 	class EA_Food_Plate_Rice : EA_Food_plate_Base_Full
 	{
@@ -78,7 +77,6 @@ class CfgVehicles
 			water=0;
 		};
 	};
-
 	class EA_Food_Plate_Water : EA_Food_plate_Base_Full
 	{
 		displayName = "Assiette remplie d'eau";
@@ -95,7 +93,6 @@ class CfgVehicles
 			water=100;
 		};
 	};
-
 	class EA_Food_Plate_Stew_Sauce : EA_Food_plate_Base_Full
 	{
 		displayName = "Sauce à ragoût";
@@ -112,7 +109,6 @@ class CfgVehicles
 			water=60;
 		};
 	};
-
 	class EA_Food_Plate_Tomato_Sauce : EA_Food_plate_Base_Full
 	{
 		displayName = "Assiette de sauce tomate";
@@ -130,8 +126,6 @@ class CfgVehicles
 		};
 	};
 
-
-	
 
 	// ------------------------------------------------------------------------------------------------------------------
 	// TIER 2 : 2 INGREDIENTS
@@ -356,7 +350,7 @@ class CfgVehicles
     class EA_Food_Plate_Ted_Sauce : EA_Food_plate_Base_Full
     {
         displayName = "Sauce bolognaise à l'ancienne";
-        descriptionShort = "dqzdd";
+        descriptionShort = "Une bonne sauce comme la Nonna sait les faire. Par contre je n'ai pas trouvé de pâtes. (Ted: J'ai eu la flemme de trouver un modèle 3D de pâtes.)";
 
         hiddenSelectionsTextures[]=
         {
@@ -757,6 +751,28 @@ class CfgVehicles
 
 // TOMATO SAUCE
 // ==============================================
-// - Tomato							+ EA_Food_Plate_Wood_Empty					==> EA_Food_Plate_Tomato_Sauce				"Purée de tomates"
-// - BeefSteakMeat					+ EA_Food_Plate_Tomato_Sauce				==> EA_Food_Plate_Bolognese_Sauce			"Sauce bolognaise"
-// - EFI_Garlic 					+ EA_Food_Plate_Bolognese_Sauce				==> EA_Food_Plate_Ted_Sauce					"Sauce bolognaise de Ted"
+// - Tomato							+ EA_Food_Plate_Wood_Empty					==> EA_Food_Plate_Tomato_Sauce		    "Purée de tomates"
+// - CowSteakMeat					+ EA_Food_Plate_Tomato_Sauce				==> EA_Food_Plate_Bolognese_Sauce	    "Sauce bolognaise"
+// - EFI_Garlic 					+ EA_Food_Plate_Bolognese_Sauce				==> EA_Food_Plate_Ted_Sauce			    "Sauce bolognaise de Ted"
+
+// MEAT REGROUP
+// ==============================================
+// - BearSteakMeat      (50%)       + BearSteakMeat	    (50%)			        ==> BearSteakMeat				        "Viande d'ours"
+//      ◽️ Recipe_EA_Food_BearSteakMeat.c
+// - BoarSteakMeat      (50%)       + BoarSteakMeat	    (50%)			        ==> BoarSteakMeat				        "Viande de sanglier"
+//      ◽️ Recipe_EA_Food_BoarSteakMeat.c
+// - ChickenBreastMeat  (50%)       + ChickenBreastMeat	(50%)			        ==> ChickenBreastMeat			        "Viande de poulet"
+//      ◽️ Recipe_EA_Food_ChickenBreastMeat.c
+// - CowSteakMeat       (50%)       + CowSteakMeat	    (50%)			        ==> CowSteakMeat				        "Viande de vache"
+//      ◽️ Recipe_EA_Food_CowSteakMeat.c
+// - DeerSteakMeat      (50%)       + DeerSteakMeat	    (50%)			        ==> DeerSteakMeat				        "Viande de cerf"
+//      ◽️ Recipe_EA_Food_DeerSteakMeat.c
+// - GoatSteakMeat      (50%)       + GoatSteakMeat	    (50%)			        ==> GoatSteakMeat				        "Viande de chèvre"
+//      ◽️ Recipe_EA_Food_GoatSteakMeat.c
+// - PigSteakMeat       (50%)       + PigSteakMeat	    (50%)			        ==> PigSteakMeat				        "Viande de porc"
+//      ◽️ Recipe_EA_Food_PigSteakMeat.c
+// - SheepSteakMeat     (50%)       + SheepSteakMeat    (50%)			        ==> SheepSteakMeat				        "Viande de mouton"
+//      ◽️ Recipe_EA_Food_SheepSteakMeat.c
+// - WolfSteakMeat      (50%)       + WolfSteakMeat	    (50%)			        ==> WolfSteakMeat				        "Viande de loup"
+//      ◽️ Recipe_EA_Food_WolfSteakMeat.c
+

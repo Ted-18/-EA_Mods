@@ -144,6 +144,46 @@ class Recipe_EA_Base extends RecipeBase // 🔴
 		// ingredientMessage0 : quantity message (for notification)
 
 
+		// Si le personnage est un homme
+		if (player.IsMale())
+		{
+			// Message de notification
+			titleNotification = "Vous réfléchissez doucement...";
+
+			// Temps de craft
+			m_AnimationLength = m_AnimationLength * 2;
+		}
+
+
+		if (ingredient0.GetDisplayName() == ingredient1.GetDisplayName())
+		{
+
+			// if (ingredient0.CanEat() == true && ingredient1.CanEat() == true)
+			// {
+
+			// 	// Get item Edible_Base
+
+
+			// 	if (ingredient0.GetFoodStageType() != ingredient1.GetFoodStageType())
+			// 	{
+
+					
+
+			// 		return false;
+
+			// 	}
+			// }	
+
+
+
+			string messageToPrint = ingredient0.GetItemType() + " " + ingredient1.GetItemType();
+			
+
+			NotificationSystem.SendNotificationToPlayerIdentityExtended(player.GetIdentity(), 3, titleNotification, messageToPrint, constImageNotificationClue);
+		}
+
+
+
 		// Ingredient 0
 		if (useMultiplicator0 == true)
 		{
