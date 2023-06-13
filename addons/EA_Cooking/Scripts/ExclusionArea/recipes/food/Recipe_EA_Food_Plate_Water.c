@@ -24,7 +24,7 @@ class Recipe_EA_Food_Plate_Water extends Recipe_EA_Base // 🔴
         //----------------------------------------------------------------------------------------------------------------------
         // ADVANCED RECIPE TEXTS
         titleNotification = "Vous réfléchissez..."; //                                          🟡
-        messageNotification0 = "Je n'ai pas assez de d'eau..."; //                              🔴
+        messageNotification0 = "Je n'ai pas tout ce qu'il faut pour cuisiner..."; //            🔴
         messageNotification1 = "J'ai un problème avec mon assiette..."; //                      🔴
 
         ingredientUnit0 = "ml"; // "g","ml", etc. //                                            🔴
@@ -35,7 +35,7 @@ class Recipe_EA_Food_Plate_Water extends Recipe_EA_Base // 🔴
     {   
 		//----------------------------------------------------------------------------------------------------------------------
 		// RECIPE GENERAL SETTINGS
-        m_Name = "[Cuisiner] Assiette remplie d'eau"; // 🔴
+        m_Name = "[Remplir] Eau"; // 🔴
         m_IsInstaRecipe = false; // 🟢
         m_AnimationLength = 1; // 🟡
         m_Specialty = 0.02; // 🟢
@@ -62,7 +62,7 @@ class Recipe_EA_Food_Plate_Water extends Recipe_EA_Base // 🔴
 		// RECIPE INGREDIENTS MODIFICATIONS
 
         //Ingrédients #1
-        InsertIngredient(0,"Waterbottle"); // 🔴
+        InsertIngredient(0,"WaterBottle"); // 🔴
         m_IngredientAddHealth[0] = 0; // 🟢
         m_IngredientSetHealth[0] = -1; // 🟡
         m_IngredientAddQuantity[0] = 0; // ❌

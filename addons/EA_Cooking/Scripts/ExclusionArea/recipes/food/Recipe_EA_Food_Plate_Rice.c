@@ -24,7 +24,7 @@ class Recipe_EA_Food_Plate_Rice extends Recipe_EA_Base // 🔴
         //----------------------------------------------------------------------------------------------------------------------
         // ADVANCED RECIPE TEXTS
         titleNotification = "Vous réfléchissez..."; //                                          🟡
-        messageNotification0 = "Je n'ai pas assez de Riz..."; //                                🔴
+        messageNotification0 = "Je n'ai pas tout ce qu'il faut pour cuisiner..."; //            🔴
         messageNotification1 = "J'ai un problème avec mon assiette..."; //                      🔴
 
         ingredientUnit0 = "g"; // "g","ml", etc. //                                             🔴

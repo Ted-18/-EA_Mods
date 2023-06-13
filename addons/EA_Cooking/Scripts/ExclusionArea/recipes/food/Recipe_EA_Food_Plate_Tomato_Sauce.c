@@ -24,7 +24,7 @@ class Recipe_EA_Food_Plate_Tomato_Sauce extends Recipe_EA_Base // 🔴
         //----------------------------------------------------------------------------------------------------------------------
         // ADVANCED RECIPE TEXTS
         titleNotification = "Vous réfléchissez..."; //                                          🟡
-        messageNotification0 = "Je n'ai pas assez de tomate"; //                                🔴
+        messageNotification0 = "Je n'ai pas tout ce qu'il faut pour cuisiner..."; //            🔴
         messageNotification1 = "J'ai un problème avec mon assiette..."; //                      🔴
 
         ingredientUnit0 = "g"; // "g","ml", etc. //                                             🔴
@@ -35,7 +35,7 @@ class Recipe_EA_Food_Plate_Tomato_Sauce extends Recipe_EA_Base // 🔴
     {   
 		//----------------------------------------------------------------------------------------------------------------------
 		// RECIPE GENERAL SETTINGS
-        m_Name = "[Cuisiner] Assiette de sauce tomate"; // 🔴
+        m_Name = "[Cuisiner] Sauce tomate"; // 🔴
         m_IsInstaRecipe = false; // 🟢
         m_AnimationLength = 1; // 🟡
         m_Specialty = 0.02; // 🟢

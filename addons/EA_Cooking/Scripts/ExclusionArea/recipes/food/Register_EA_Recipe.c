@@ -13,7 +13,9 @@ modded class PluginRecipesManager
         RegisterRecipe(new Recipe_EA_Food_Plate_Tomato_Sauce );
 
         // CRAFT TIER 2
-
+        RegisterRecipe(new Recipe_EA_Food_Plate_Vegetables_Soup );
+        RegisterRecipe(new Recipe_EA_Food_Plate_Vegetables_Stew );
+        
 
         // CRAFT TIER 3
 

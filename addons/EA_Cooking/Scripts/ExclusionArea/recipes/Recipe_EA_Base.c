@@ -130,6 +130,9 @@ class Recipe_EA_Base extends RecipeBase // 🔴
 		string ingredientMessage0;
 		string ingredientMessage1;
 
+		string ingredientName0 = ingredient0.GetDisplayName();
+		string ingredientName1 = ingredient1.GetDisplayName();
+
 
 		//----------------------------------------------------------------------------------------------------------------------
 		// ADVANCED RECIPE CALCULATIONS
@@ -155,7 +158,7 @@ class Recipe_EA_Base extends RecipeBase // 🔴
 			currentIngredientQuantity0 = ingredient0.GetQuantity();
 
 			// Define quantity message
-			ingredientMessage0 = currentIngredientQuantity0.ToString() + ingredientUnit0 + " / " + minimumIngredientQuantity0.ToString() + ingredientUnit0;
+			ingredientMessage0 = "( " + ingredientName0 + " " + currentIngredientQuantity0.ToString() + ingredientUnit0 + " / " + minimumIngredientQuantity0.ToString() + ingredientUnit0 + " )";
 
 			m_IngredientAddQuantity[0] = -minimumIngredientQuantity0;
 
@@ -184,7 +187,7 @@ class Recipe_EA_Base extends RecipeBase // 🔴
 
 			currentIngredientQuantity1 = ingredient1.GetQuantity();
 
-			ingredientMessage1 = currentIngredientQuantity1.ToString() + ingredientUnit1 + " / " + minimumIngredientQuantity1.ToString() + ingredientUnit1;
+			ingredientMessage1 = "( " + ingredientName1 + " " + currentIngredientQuantity1.ToString() + ingredientUnit1 + " / " + minimumIngredientQuantity1.ToString() + ingredientUnit1 + " )";
 
 			m_IngredientAddQuantity[1] = -minimumIngredientQuantity1;
 		} else

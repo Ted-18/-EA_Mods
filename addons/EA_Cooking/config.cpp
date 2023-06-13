@@ -59,7 +59,7 @@ class CfgVehicles
 	// EA_Food_Plate_Rice
 	// EA_Food_Plate_Water
 	// EA_Food_Plate_Stew_Sauce
-	// EA_Food_Plate_Tomato_Sauce
+	// z
 
 	class EA_Food_Plate_Rice : EA_Food_plate_Base_Full
 	{
@@ -138,15 +138,15 @@ class CfgVehicles
 	// EA_Food_Plate_Vegetables_Soup
 	// EA_Food_Plate_Vegetables_Stew
 
-	// EA_Food_Plate_Stew_Bear	
-	// EA_Food_Plate_Stew_Boar			
-	// EA_Food_Plate_Stew_Chicken			
-	// EA_Food_Plate_Stew_Cow				
-	// EA_Food_Plate_Stew_Deer					
-	// EA_Food_Plate_Stew_Goat			
-	// EA_Food_Plate_Stew_Pig				
-	// EA_Food_Plate_Stew_Sheep			
-	// EA_Food_Plate_Stew_Wolf
+	// EA_Food_Plate_Stew_Bear          (Recipe_EA_Food_Plate_Stew_Bear.c)
+	// EA_Food_Plate_Stew_Boar		    (Recipe_EA_Food_Plate_Stew_Boar.c)	
+	// EA_Food_Plate_Stew_Chicken		(Recipe_EA_Food_Plate_Stew_Chicken.c)
+	// EA_Food_Plate_Stew_Cow		    (Recipe_EA_Food_Plate_Stew_Cow.c)
+	// EA_Food_Plate_Stew_Deer			(Recipe_EA_Food_Plate_Stew_Deer.c)
+	// EA_Food_Plate_Stew_Goat		    (Recipe_EA_Food_Plate_Stew_Goat.c)
+	// EA_Food_Plate_Stew_Pig			(Recipe_EA_Food_Plate_Stew_Pig.c)
+	// EA_Food_Plate_Stew_Sheep		    (Recipe_EA_Food_Plate_Stew_Sheep.c)
+	// EA_Food_Plate_Stew_Wolf			(Recipe_EA_Food_Plate_Stew_Wolf.c)
 
 	// EA_Food_Plate_Bolognese_Sauce
 
