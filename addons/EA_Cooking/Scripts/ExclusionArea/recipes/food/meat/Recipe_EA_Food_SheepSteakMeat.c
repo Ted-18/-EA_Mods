@@ -2,9 +2,20 @@ class Recipe_EA_Food_SheepSteakMeat extends Recipe_EA_Base // 🔴
 {	
 
     override void advancedRecipeSettings()
-    {
-        //----------------------------------------------------------------------------------------------------------------------
-        // ADVANCED RECIPE CONDITIONS
+	{
+		//----------------------------------------------------------------------------------------------------------------------
+		// ADVANCED RECIPE CONDITIONS
+
+		// Define if we use strict match
+		// true : 
+		//  - cooking status need to be the same
+		// false : no strict match
+		modeStrictMatch = true; // 						🔴
+
+		// Define if we use strict match for completing
+		// true : Item #0 and #1 amount need to be 100% of maximum quantity of this item type
+		// false : Completing mode not activated
+		strictMatchCompleting = true; // 				🔴
 
         // Define if we use multiplicator or item amount
         // true : multiplicator (%)

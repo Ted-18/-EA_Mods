@@ -379,7 +379,7 @@ class CfgVehicles
         {
             "EA_Cooking\items\ExclusionArea\cookware\plate\wood\cookware_plate_wood_empty_CO.paa"
         };
-	}
+	};
 
 };
 	
@@ -774,5 +774,5 @@ class CfgVehicles
 // - SheepSteakMeat     (50%)       + SheepSteakMeat    (50%)			        ==> SheepSteakMeat				        "Viande de mouton"
 //      ◽️ Recipe_EA_Food_SheepSteakMeat.c
 // - WolfSteakMeat      (50%)       + WolfSteakMeat	    (50%)			        ==> WolfSteakMeat				        "Viande de loup"
-//      ◽️ Recipe_EA_Food_WolfSteakMeat.c
+
 
